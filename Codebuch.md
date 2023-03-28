@@ -32,19 +32,25 @@ Fehlende Werte werden mit 0 codiert.
 # EDGE-Attribute
 
 *id*  
+
 (eindeutige Codierung des Knoten)   
 Deutschland: 132 Knoten, USA: 266 Knoten
 
 Die ID sind die ersten vier Buchstaben des Namens, Artikel wie "the" wurden weggelassen
 
+
 *from*
+
 initiierender Knoten
 
 *to*
+
 erhaltender Knoten
 
 *relation*
+
 Beziehungsart zwischen den Personen  
+
 
 1 - Unter Vertrag (Artists zu Label)
 
