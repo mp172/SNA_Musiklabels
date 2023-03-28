@@ -26,6 +26,7 @@ Auf der Beziehungsebene interessiert uns, wer wo unter Vertrag steht, welche Lab
 Das Netzwerk ist ein gerichtetes two-mode Akteursnetzwerk.
 
 *Umgang mit fehlgenden Werten*
+
 Fehlende Werte werden nicht erfasst.
 
 # EDGE-Attribute
