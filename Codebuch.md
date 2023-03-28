@@ -2,7 +2,7 @@
 
 # Datensatz Musiklabels Deutschland und USA
 Codebuch Stand 2023-03
-erstellt von Alicia Becht (ab297), Marie Pütter (mp172) und Sophia Rapp (sr187)
+erstellt von Alicia Becht (ab297), Marie Pütter (mp172), Fritz Wirbitzky (fw067), Paulina Bahr (pb089), Anne Meister (am214) und Sophia Rapp (sr187)
 
 ## Inhalt
 - DE_nodes5.csv (Nodelist DE)
