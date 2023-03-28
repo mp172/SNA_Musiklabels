@@ -109,13 +109,13 @@ Name des Artists
 
 Rang auf der Chartliste
 
-bei Label: NA
+bei Label: 0
 
 *points*
 
 Punktezahl auf der Chartliste
 
-bei Label: NA
+bei Label: 0
 
 
 *gender*
@@ -128,7 +128,7 @@ bei Label: NA
 
 4 -Bands mit gemischten Geschlechtern
 
-bei Label: NA
+bei Label: 0
 
 *alive*
 
@@ -136,7 +136,7 @@ bei Label: NA
 
 2-no
 
-NA - Label
+0 - Label
 
 
 *genre*
@@ -161,6 +161,6 @@ NA - Label
 
 10 - Reggaeton
 
-bei Label: NA
+bei Label: 0
 
 ##
