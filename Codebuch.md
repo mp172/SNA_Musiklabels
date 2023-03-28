@@ -45,67 +45,105 @@ erhaltender Knoten
 Beziehungsart zwischen den Personen  
 
 1 - Unter Vertrag (Artists zu Label)
-2 - Vertrieb über (Label zu Majorlabel (Vertrieb))
+
+2 - Vertrieb über (Label zu Majorlabel (Vertrieb)
+
 3 - Vertrag + Vertrieb (Artist zu Label)
+
 4 - Ist Sublabel von… (Sublabel zu Label)
+
 5 - Beteiligung ohne Vertrag (Filmmusik, Artist zu Label) 
+
 6 - Arbeitsgemeinschaft/gleichgewichtete Kooperation (Label zu Label)
+
 7 - Label von (Künstler zu selbst gegründeten Label)
 
 
 # NODE-Attribute  
   
 *id*  
+
 Identische ID wie aus der edgelist zur Identifikation der Knoten.
 
 *name*
+
 Name des Artists
 
 *type*
+
 1 - Mensch
 2 - Orga
 
 *sort*
+
 1-Solokünstler:in
+
 2-Band
+
 3-Majorlabel
+
 4-Sublabel
+
 5-Independent-Label
+
 6-Eigenvertrieb
+
 7-reiner Vertrieb-Dienstleister
+
 8 - Produzent:in
 
 *ranking*
+
 Rang auf der Chartliste
 bei Label: NA
 
 *points*
+
 Punktezahl auf der Chartliste
 bei Label: NA
 
 *gender*
-1-female
-2-male
-3 - divers
+
+1 -female
+
+2 -male
+
+3 -divers
+
 4 -Bands mit gemischten Geschlechtern
+
 bei Label: NA
 
 *alive*
+
 1-yes
+
 2-no
+
 NA - Label
 
 *genre*
+
 1 - Pop/ Indie Pop 
+
 2 - Schlager/Ballermann
+
 3 - Rock/ Metal/ Indie Rock
+
 4 - HipHop/Rap/RnB
+
 5 - Klassik 
+
 6 - Soul/Funk 
+
 7 - House/Electro/Techno
+
 8 - Country
+
 9 - Jazz
+
 10 - Reggaeton
+
 bei Label: NA
 
 ##
