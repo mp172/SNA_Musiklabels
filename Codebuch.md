@@ -27,13 +27,14 @@ Das Netzwerk ist ein gerichtetes two-mode Akteursnetzwerk.
 
 *Umgang mit fehlgenden Werten*
 
-Fehlende Werte werden nicht erfasst.
+Fehlende Werte werden mit 0 codiert.
 
 # EDGE-Attribute
 
 *id*  
 (eindeutige Codierung des Knoten)   
 Deutschland: 132 Knoten, USA: 266 Knoten
+
 Die ID sind die ersten vier Buchstaben des Namens, Artikel wie "the" wurden weggelassen
 
 *from*
@@ -66,14 +67,18 @@ Beziehungsart zwischen den Personen
 
 Identische ID wie aus der edgelist zur Identifikation der Knoten.
 
+
 *name*
 
 Name des Artists
 
+
 *type*
 
 1 - Mensch
+
 2 - Orga
+
 
 *sort*
 
@@ -93,15 +98,19 @@ Name des Artists
 
 8 - Produzent:in
 
+
 *ranking*
 
 Rang auf der Chartliste
+
 bei Label: NA
 
 *points*
 
 Punktezahl auf der Chartliste
+
 bei Label: NA
+
 
 *gender*
 
@@ -122,6 +131,7 @@ bei Label: NA
 2-no
 
 NA - Label
+
 
 *genre*
 
