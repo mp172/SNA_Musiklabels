@@ -1,6 +1,6 @@
 # SNA_Musiklabels
 
-# Datensatz Musiklabels Deutschland und USA#
+# Datensatz Musiklabels Deutschland und USA
 Codebuch Stand 2023-03
 erstellt von Alicia Becht (ab297), Marie Pütter (mp172) und Sophia Rapp (sr187)
 
@@ -12,7 +12,16 @@ erstellt von Alicia Becht (ab297), Marie Pütter (mp172) und Sophia Rapp (sr187)
 - Codebuch.md (Codierung der Datensätze)
 
 ## Ursprung und Datenerhebung
-Ich habe den Datensatz unter den Studierenden des dritten Semesters im Kurs Netzwerkanalyse erhoben. Die Daten sind nach der Erhebung nach einem Zufallsprinzip anonymisiert worden.
+
+Wir untersuchen die Labelstruktur der erfolgrichsten Artist in Deutschland (https://www.chartsurfer.de/musik/single-charts-deutschland/jahrescharts/artist/2022/top-100/4) und den USA (https://www.chartsurfer.de/musik/single-charts-usa/jahrescharts/artist/2022/top-100/4) im Jahr 2022. 
+
+Dabei interessiert uns, welche Rolle die unterschiedlichen Formen von Labels in der Musikbranche haben. 
+Für das Netzwerk wurden zwei Datensätze, zusammengesetzt aus Labels und Artists, erhoben. Dabei wurden nur Artists berücksichtigt, die die Staatsbürgerschaft des jeweiligen Landes besitzen (Datensatz USA: inklusive Puerto Rico) oder deren Songs in der Landessprache verfasst sind. Die entsprechenden Labels wurden anhand der aktuell bestehenden Verträge erhoben.
+
+Neben den Beziehungsstrukturen zwischen Artist und Label wurden 
+Variablen (Typus, Art, Geschlecht, Lebendigkeit, Genre, Platzierung anhand Punkte (https://www.chartsurfer.de/auswertung-info)) erfasst. 
+
+Auf der Beziehungsebene interessiert uns, wer wo unter Vertrag steht, welche Label wie miteinander verknüpft sind und welche Artists eigene Labels besitzen. 
 
 Das Netzwerk ist ein gerichtetes two-mode Akteursnetzwerk.
 
@@ -23,102 +32,80 @@ Fehlende Werte werden nicht erfasst.
 
 *id*  
 (eindeutige Codierung des Knoten)   
-codiert von 1 bis 38, jede ID entspricht einem Studenten
+Deutschland: 132 Knoten, USA: 266 Knoten
+Die ID sind die ersten vier Buchstaben des Namens, Artikel wie "the" wurden weggelassen
 
 *from*
-initiierender Knoten, in diesem Fall: Student/in fragt um Rat oder zeigt präferierte Zusammenarbeit
+initiierender Knoten
 
 *to*
-erhaltender Knoten, in diesem Fall: Student/in wird um Rat gefragt oder für Zusammenarbeit präferiert
-
-*weight*  
-Beziehungsstärke aufgrund der Nennung in den Fragen)  
-3 = sehr starke Beziehung (erste Nennung),   
-1 = starke Beziehung vorhanden (zweite Nennung)
+erhaltender Knoten
 
 *relation*
 Beziehungsart zwischen den Personen  
-1 = work Projektbasierte Beziehung: Bei einem gerichteten Netzwerk präferiert der Sender (erste Spalte) die Zusammenarbeit mit der genannten Zielperson (zweite Spalte).  
-2 = help Unterstützungsbeziehung: Bei einem gerichteten Netzwerk fragt der Sender (erste Spalte) die genannte Person (zweite Spalte) um Rat.  
-3 = love Liebesbeziehung zwischen Akteuren, codiert nach dem Attribut complicated
 
-*complicated*  
-1 = Beziehung (typische Paarbeziehung, d.h. reziprok zwischen beiden PartnerInnen),      
-2 = Tinder-Like (hat die person rechts geswiped, muss aber nicht gegenseitig sein)     
-3 = Crush (einseitig verliebt, ohne dass die Person etwas davon weiss).  
+1 - Unter Vertrag (Artists zu Label)
+2 - Vertrieb über (Label zu Majorlabel (Vertrieb))
+3 - Vertrag + Vertrieb (Artist zu Label)
+4 - Ist Sublabel von… (Sublabel zu Label)
+5 - Beteiligung ohne Vertrag (Filmmusik, Artist zu Label) 
+6 - Arbeitsgemeinschaft/gleichgewichtete Kooperation (Label zu Label)
+7 - Label von (Künstler zu selbst gegründeten Label)
 
 
 # NODE-Attribute  
   
 *id*  
-Identische ID wie aus der edgelist zur Identifikation der Knoten. In diesem Fall sind alle personenbezogenen Daten anonymisiert von 1 bis 38.
+Identische ID wie aus der edgelist zur Identifikation der Knoten.
 
 *name*
-numerische ID
+Name des Artists
 
-*name_first*
-Vorname abgekürzt, z.B. für Visualisierung, falls der Name zu lange ist
+*type*
+1 - Mensch
+2 - Orga
 
-*sex*    
-Bitte geben Sie ihr Geschlecht an:  
-1 = weiblich  
-2 = männlich  
-3 = divers
-  
-*crpr**    
-Welche Studienrichtung haben Sie vertieft?  
-1 = CR  
-2 = PR
+*sort*
+1-Solokünstler:in
+2-Band
+3-Majorlabel
+4-Sublabel
+5-Independent-Label
+6-Eigenvertrieb
+7-reiner Vertrieb-Dienstleister
+8 - Produzent:in
 
-*height*  
-Größe in cm   
+*ranking*
+Rang auf der Chartliste
+bei Label: NA
 
-*weight*  
-Gewicht in kg  
+*points*
+Punktezahl auf der Chartliste
+bei Label: NA
 
-*age_real*   
-Alter in natürlichen Zahlen.  
+*gender*
+1-female
+2-male
+3 - divers
+4 -Bands mit gemischten Geschlechtern
+bei Label: NA
 
-*age*   
-Bitte geben Sie Ihr Alter an:  
-1 = bis 20 Jahre    
-2 = 21 bis 22 Jahre    
-3 = 23 bis 24 Jahre  
-4 = 25 und älter  
+*alive*
+1-yes
+2-no
+NA - Label
 
-*smoke*    
-Rauchen Sie mindestens ein Mal pro Woche?  
-1 = nein   
-2 = ja  
-  
-*tatoo*    
-Tatoo vorhanden?   
-1 = nein  
-2 = ja  
-
-*phone*  
-1 = android  
-2 = iOS/iphone  
-  
-*eyes*    
-Welche Augenfarbe?    
-1 = grün,   
-2 = blau,   
-3 = braun,   
-4 = blau.     
-
-*hair*  
-Welche Haarfarbe?  
-1 = braun,      
-2 = schwarz,   
-3 = blond,    
-4 = rot.    
-
-*location* 
-Wohnort, als string/characters codiert  
-
-*county*  
-Bundesland, als string/characters codiert  
-
+*genre*
+1 - Pop/ Indie Pop 
+2 - Schlager/Ballermann
+3 - Rock/ Metal/ Indie Rock
+4 - HipHop/Rap/RnB
+5 - Klassik 
+6 - Soul/Funk 
+7 - House/Electro/Techno
+8 - Country
+9 - Jazz
+10 - Reggaeton
+bei Label: NA
 
 ##
